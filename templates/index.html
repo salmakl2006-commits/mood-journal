@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Mood Journal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Titre principal -->
+        <header>
+            <h1>My Mood Journal 🌸</h1>
+            <p>Write your feelings and take care of yourself.</p>
+        </header>
+
+        <!-- Sélection de l'humeur -->
+        <section class="mood-section">
+
+            <h2>How are you feeling today?</h2>
+
+            <div class="mood-buttons">
+
+                <button onclick="selectMood('Happy 😊')">
+                    Happy 😊
+                </button>
+
+                <button onclick="selectMood('Sad 😢')">
+                    Sad 😢
+                </button>
+
+                <button onclick="selectMood('Angry 😠')">
+                    Angry 😠
+                </button>
+
+                <button onclick="selectMood('Calm 😌')">
+                    Calm 😌
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Journal -->
+        <section class="journal-section">
+
+            <h2>Write your journal ✍️</h2>
+
+            <textarea
+                id="journal"
+                placeholder="Write about your day..."
+            ></textarea>
+
+            <button
+                class="save"
+                id="saveButton"
+                onclick="saveEntry()"
+            >
+                Save Entry 💜
+            </button>
+
+            <p id="message"></p>
+
+        </section>
+
+        <!-- Historique -->
+        <section class="history">
+
+            <h2>My Journal History 📖</h2>
+
+            <!-- Filtre par date -->
+            <div class="date-filter">
+
+                <h3>Filter my journal 📅</h3>
+
+                <select
+                    id="periodFilter"
+                    onchange="displayEntries()"
+                >
+
+                    <option value="all">All entries</option>
+                    <option value="today">Today</option>
+                    <option value="week">This week</option>
+                    <option value="month">This month</option>
+
+                </select>
+
+            </div>
+
+            <!-- Liste des entrées -->
+            <div id="entries"></div>
+
+        </section>
+
+        <!-- Statistiques -->
+        <section class="statistics">
+
+            <h2>My Mood Statistics 📊</h2>
+
+            <div id="statistics"></div>
+
+            <!-- Graphique -->
+            <div class="chart-container">
+
+                <canvas id="moodChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
+

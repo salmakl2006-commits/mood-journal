@@ -1,0 +1,5 @@
+mood_journal.db
+__pycache__/
+.venv/
+venv/
+.env

@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #e8dff5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #9b59b6;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #555;
+    font-size: 20px;
+    margin: 25px 0 15px;
+}
+
+.moods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #f3e5f5;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d7bde2;
+    transform: translateY(-3px);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    font-size: 15px;
+}
+
+.save {
+    background: #9b59b6;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.save:hover {
+    background: #884ea0;
+}
+
+#message {
+    margin-top: 15px;
+    color: #9b59b6;
+}
+/* History section */
+
+.history {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.history h2 {
+    text-align: center;
+    color: #9b59b6;
+    margin-bottom: 20px;
+}
+
+.entry-card {
+    background: #faf5ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #b57edc;
+}
+
+.entry-card h3 {
+    color: #9b59b6;
+    margin-bottom: 10px;
+}
+
+.entry-card small {
+    color: #888;
+}
+
+.entry-card p {
+    margin-top: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.delete-btn {
+    background: #ffe0e0;
+    color: #c0392b;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: #ffcccc;
+}
+
+/* Statistics */
+
+.statistics {
+    background: #f8efff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.statistics h2 {
+    color: #9b59b6;
+}
+
+.statistics p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+.edit-btn {
+    background: #e8d9ff;
+    color: #7d3c98;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+.chart-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto 0;
+    position: relative;
+}
+.date-filter {
+    background: #faf5ff;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.date-filter h3 {
+    color: #9b59b6;
+    margin-bottom: 12px;
+}
+
+.date-filter select {
+    padding: 10px 15px;
+    border: 1px solid #d7bde2;
+    border-radius: 10px;
+    background: white;
+    color: #7d3c98;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+}
